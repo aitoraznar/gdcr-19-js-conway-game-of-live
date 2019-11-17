@@ -286,4 +286,74 @@ describe('Update status', () => {
     universe = updateStatus(universe);
     expect(universe).toStrictEqual(initialState);
   });
+
+  test('Oscilator "Octogono"', () => {
+    const state1 = [
+      [0, 0, 0, 1, 1, 0, 0, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 1, 0, 0, 0, 0, 1, 0],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [0, 1, 0, 0, 0, 0, 1, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 0, 0, 1, 1, 0, 0, 0],
+    ];
+    const state2 = [
+      [0, 0, 0, 1, 1, 0, 0, 0],
+      [0, 0, 1, 1, 1, 1, 0, 0],
+      [0, 1, 0, 0, 0, 0, 1, 0],
+      [1, 1, 0, 0, 0, 0, 1, 1],
+      [1, 1, 0, 0, 0, 0, 1, 1],
+      [0, 1, 0, 0, 0, 0, 1, 0],
+      [0, 0, 1, 1, 1, 1, 0, 0],
+      [0, 0, 0, 1, 1, 0, 0, 0],
+    ];
+    const state3 = [
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [1, 1, 0, 1, 1, 0, 1, 1],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [1, 1, 0, 1, 1, 0, 1, 1],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+    ];
+    const state4 = [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 1, 0, 1, 1, 0, 1, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 1, 0, 1, 1, 0, 1, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ];
+    const state5 = [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 1, 1, 1, 1, 0, 0],
+      [0, 1, 0, 1, 1, 0, 1, 0],
+      [0, 1, 1, 0, 0, 1, 1, 0],
+      [0, 1, 1, 0, 0, 1, 1, 0],
+      [0, 1, 0, 1, 1, 0, 1, 0],
+      [0, 0, 1, 1, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ];
+  
+    let universe = createUniverse(state1);
+
+    universe = updateStatus(universe);
+    expect(universe).toStrictEqual(state2);
+
+    universe = updateStatus(universe);
+    expect(universe).toStrictEqual(state3);
+
+    universe = updateStatus(universe);
+    expect(universe).toStrictEqual(state4);
+    
+    universe = updateStatus(universe);
+    expect(universe).toStrictEqual(state5);
+    
+    universe = updateStatus(universe);
+    expect(universe).toStrictEqual(state1);
+  });
 });
