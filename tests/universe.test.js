@@ -43,6 +43,19 @@ describe('Get the neighbors', () => {
     let universe = createUniverse(initialState);
     expect(getNeigthbors(universe, 1, 2)).toStrictEqual([0, 0, 0, 0, 1, 0, 0, 0]);
   });
+
+  test('Checking neighbors with out of bounds neighbors', () => {
+    const initialState = [
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 1, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0]
+    ];
+  
+    let universe = createUniverse(initialState);
+    expect(getNeigthbors(universe, 0, 0)).toStrictEqual([null, null, null, null, 0, null, 0, 0]);
+  });
 });
 
 describe('Check the rules', () => {
