@@ -21,3 +21,8 @@ npm test
 ```
 
 A disfrutar del Global Day of the Coderetreat.
+
+
+# TODO
+
+* Manage escaping figures, let them exit from the visual bounds.
