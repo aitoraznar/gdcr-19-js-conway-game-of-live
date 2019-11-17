@@ -23,7 +23,7 @@ function updateStatus(universe) {
 
   for (let x = 0; x < universe.length; x++) {
     newStatus.push(new Array(universe[x].length));
-    for (let y = 0; y < universe.length; y++) {
+    for (let y = 0; y < universe[x].length; y++) {
       newStatus[x][y] = updateCellStatus(universe, x, y);
     }
   }
