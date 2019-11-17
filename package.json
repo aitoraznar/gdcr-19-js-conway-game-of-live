@@ -2,6 +2,7 @@
   "name": "gdcr-javascript",
   "version": "1.0.0",
   "private": true,
+  "main": "./src/game-of-life",
   "engines": {
     "node": ">=10.0.0"
   },
@@ -10,5 +11,9 @@
   },
   "devDependencies": {
     "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "cli-clear": "^1.0.4"
   }
 }

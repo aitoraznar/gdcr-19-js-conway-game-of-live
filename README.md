@@ -3,6 +3,11 @@
 Este es un proyecto para arrancar una sesión de trabajo en JavaScript en el [Global Day of the Coderetreat](https://www.coderetreat.org/).
 Está configurado para utilizar [Jest](https://jestjs.io/) como *test runner*.
 
+# Run
+```bash
+node .
+```
+
 Para comenzar a trabajar, instala primero las dependencias necesarias ejecutando:
 
 ```bash
