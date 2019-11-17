@@ -263,4 +263,27 @@ describe('Update status', () => {
     universe = updateStatus(universe);
     expect(universe).toStrictEqual(initialState);
   });
+
+  test('Oscilator "Toad"', () => {
+    const initialState = [
+      [0, 0, 0, 0],
+      [0, 1, 1, 1],
+      [1, 1, 1, 0],
+      [0, 0, 0, 0]
+    ];
+    const finalState = [
+      [0, 0, 1, 0],
+      [1, 0, 0, 1],
+      [1, 0, 0, 1],
+      [0, 1, 0, 0]
+    ];
+  
+    let universe = createUniverse(initialState);
+
+    universe = updateStatus(universe);
+    expect(universe).toStrictEqual(finalState);
+
+    universe = updateStatus(universe);
+    expect(universe).toStrictEqual(initialState);
+  });
 });
